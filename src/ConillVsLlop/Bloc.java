@@ -38,5 +38,20 @@ public class Bloc {
         public void setAnimal(Animal animal){
             this.animal = animal;
         }
+
+    public boolean esLlop() {
+        if(animal instanceof Llop) return true;
+        return false;
+    }
+
+    public boolean esConill() {
+        if(animal instanceof Conill) return true;
+        return false;
+    }
+
+    public boolean esRoca() {
+        if(terreny == 1) return true;
+        return false;
+    }
 }
 

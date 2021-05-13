@@ -2,8 +2,11 @@ package ConillVsLlop;
 
 public abstract class Animal{
         int x, y;
+        boolean mort = false;
         public abstract String toString();
-        public void mou(){
+    public void mor() {this.mort = true; }
+    public void mou(){
+        if(mort) return;
             Bloc[][] tauler = ConillsVsLlopsSim.tauler;
             int i = (int) (Math.random() * 3) - 1 +x;
             int j = (int) (Math.random() * 3) - 1 +y;
